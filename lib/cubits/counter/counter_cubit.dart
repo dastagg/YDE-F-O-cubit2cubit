@@ -36,7 +36,7 @@ class CounterCubit extends Cubit<CounterState> {
 
   @override
   Future<void> close() {
-    return super.close();
     colorSubscription.cancel();
+    return super.close();
   }
 }
